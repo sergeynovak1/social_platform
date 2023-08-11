@@ -18,6 +18,12 @@ my_posts = [
 ]
 
 
+def find_post(id):
+    for p in my_posts:
+        if p['id'] == id:
+            return p
+
+
 @app.get('/')
 async def root():
     return {'message': 'Hello world'}
@@ -26,6 +32,12 @@ async def root():
 @app.get('/posts')
 def get_posts():
     return {'data': my_posts}
+
+
+@app.get('/posts/{id}')
+def get_post(id: int):
+    post = find_post(id)
+    return {'post_detail': post}
 
 
 @app.post('/create-post')
