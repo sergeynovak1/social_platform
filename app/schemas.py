@@ -45,4 +45,4 @@ class Token(BaseModel):
 
 
 class TokenData(BaseModel):
-    id: str = None
+    id: int = None
