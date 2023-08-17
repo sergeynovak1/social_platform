@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Response, status, HTTPException, Depends
 
-from app.routers import post, user, auth, vote
+from src.routers import post, user, auth, vote
 
 app = FastAPI()
 

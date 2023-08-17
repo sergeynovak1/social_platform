@@ -3,8 +3,8 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 from typing import List
 
-from app import models, schemas, oauth2
-from app.database import get_db
+from src import models, schemas, oauth2
+from src.database import get_db
 
 router = APIRouter(
     prefix="/posts",

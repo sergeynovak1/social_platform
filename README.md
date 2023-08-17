@@ -3,5 +3,5 @@
 ### Run 
 ```shell
 alembic upgrade head
-uvicorn app.main:app --reload
+uvicorn src.main:app --reload
 ```
