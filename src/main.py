@@ -1,6 +1,9 @@
 from fastapi import FastAPI, Response, status, HTTPException, Depends
 
-from src.routers import post, user, auth, vote
+from src.post import router as post
+from src.vote import router as vote
+from src.auth import router as auth
+from src.user import router as user
 
 app = FastAPI()
 
