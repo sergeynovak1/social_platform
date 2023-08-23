@@ -24,8 +24,16 @@ class Post(PostBase):
         from_attributes = True
 
 
-class PostOut(BaseModel):
-    Post: Post
+class PostExample(PostBase):
+    id: int
+    created_at: datetime
+    owner_id: int
+
+    class Config:
+        from_attributes = True
+
+
+class PostOut(Post):
     votes: int
 
     class Config:
